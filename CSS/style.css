@@ -1,0 +1,193 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    /* ----------------- Colors ------------------ */
+    --Nutmeg: hsl(14, 45%, 36%);
+    --Dark-Raspberry: hsl(332, 51%, 32%);
+    --White: hsl(0, 0%, 100%);
+    --Rose-White: hsl(330, 100%, 98%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --Light-Grey: hsl(30, 18%, 87%);
+    --Wenge-Brown: hsl(30, 10%, 34%);
+    --Dark-Charcoal: hsl(24, 5%, 18%);
+
+    /* --------------- font family ----------- */
+    --primary-font: "Young Serif", serif;
+    --secondary-font: Outfit;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background: var(--Eggshell);
+    line-height: 1.5;
+}
+
+.recipe__container {
+    background: var(--White);
+    max-width: 768px;
+    padding: 40px;
+    margin: 120px auto;
+    border-radius: 15px;
+    transition: all .45s ease;
+}
+
+.recipe__container__recipe-image-container {
+    width: 100%;
+}
+.recipe__container__recipe-image-container img {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.recipe__container__title {
+    color: var(--Dark-Charcoal);
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin-top: 25px;
+}
+
+.recipe__container__sub-title {
+    color: var(--Wenge-Brown);
+    font-family: var(--secondary-font);
+    font-size: 16px;
+    margin-top: 18px;
+}
+
+.recipe__container__preparation-stats {
+    background: var(--Rose-White);
+    width: 100%;
+    padding: 20px 30px;
+    margin-top: 30px;
+}
+
+.recipe__container__preparation-stats__heading {
+    color: var(--Dark-Raspberry);
+    font-family: var(--secondary-font);
+    font-weight: 600px;
+    font-size: 20px;
+}
+
+.recipe__container__preparation-stats ul {
+    margin: 10px 25px;
+}
+.recipe__container__preparation-stats li {
+    color: var(--Wenge-Brown);
+    font-family: var(--secondary-font);
+    font-size: 16px;
+    word-spacing: 4px;
+    margin: 10px;
+    padding-left: 15px;
+}
+
+.recipe__container__preparation-stats li::marker {
+    color: var(--Dark-Raspberry);
+}
+
+.recipe__container__ingredients,
+.recipe__container__instructions {
+    margin: 30px 0 15px;
+    border-bottom: 1px solid var(--Light-Grey);
+}
+
+.recipe__container__ingredients h3,
+.recipe__container__instructions h3,
+.recipe__container__nutrition h3 {
+    color: var(--Nutmeg);
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.recipe__container__ingredients ul,
+.recipe__container__instructions ol {
+    margin: 20px 25px;
+}
+
+.recipe__container__ingredients li,
+.recipe__container__instructions li {
+    color: var(--Wenge-Brown);
+    font-family: var(--secondary-font);
+    font-size: 16px;
+    padding-left: 10px;
+    margin: 8px 0;
+}
+
+.recipe__container__ingredients li::marker,
+.recipe__container__instructions li::marker {
+    color: var(--Nutmeg);
+}
+.recipe__container__nutrition {
+    margin-top: 30px;
+}
+.recipe__container__nutrition p {
+    color: var(--Wenge-Brown);
+    font-family: var(--secondary-font);
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.recipe__container__nutrition__stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.recipe__container__nutrition__stats__stat-item {
+    display: flex;
+    padding: 10px;
+}
+
+.recipe__container__nutrition__stats__stat-item:not(.recipe__container__nutrition__stats__stat-item:nth-of-type(4)) {
+    border-bottom: 1px solid var(--Light-Grey);
+}
+
+.recipe__container__nutrition__stats__stat-item span {
+    flex: 1;
+    color: var(--Wenge-Brown);
+    font-family: var(--secondary-font);
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+.recipe__container__nutrition__stats__stat-item  .value {
+    color: var(--Nutmeg);
+    font-weight: bold;
+}
+
+
+.attribution { 
+    font-size: 14px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 768px) {
+    .recipe__container {
+        margin: 0;
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .recipe__container {
+        padding: 0;
+    }
+
+    .recipe__container__content {
+        padding: 20px;
+    }
+    
+}
